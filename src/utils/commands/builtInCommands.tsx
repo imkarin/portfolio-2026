@@ -18,7 +18,9 @@ const executeBuiltInCommand = async (
   if (trimmed === "tv shows" || trimmed === "tv series") {
     command = trimmed;
   }
-  console.log("command", command);
+
+  const latestCommand = commandHistory[commandHistory.length - 1] || "";
+
   switch (command.toLowerCase()) {
     // Personalized commands
     case "rifurbish":
@@ -436,6 +438,26 @@ const executeBuiltInCommand = async (
         content: <ImageFetchOutput topic="dog" url={dataDog?.message} />,
       };
 
+    // Yes/no reply
+    // @ts-ignore - intentional fall through: if latestCommand doesn't match, no/yes should just return command not found
+    case "yes":
+      if (latestCommand.toLowerCase() === "piano") {
+        // Question was: "Did you learn something new? :)"
+        return {
+          type: "info",
+          content: "nice! hope you liked it :)",
+        };
+      }
+
+    // @ts-ignore - intentional fall through: if latestCommand doesn't match, no/yes should just return command not found
+    case "no":
+      if (latestCommand.toLowerCase() === "piano") {
+        // Question was: "Did you learn something new? :)"
+        return {
+          type: "info",
+          content: "skill issue",
+        };
+      }
     default:
       return {
         type: "error",
