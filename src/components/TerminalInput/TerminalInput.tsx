@@ -26,8 +26,8 @@ const TerminalInput = ({
   const inputRef = useRef<HTMLInputElement>(null);
 
   const onInputChange = (e: ChangeEvent<HTMLInputElement>) => {
+    onChange(e.target.value);
     const val = e.target.value.toLowerCase();
-    onChange(val);
 
     const detectedEasterEgg = EASTER_EGG_COMMANDS.find((command) =>
       val.includes(command),
