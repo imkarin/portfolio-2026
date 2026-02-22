@@ -29,8 +29,11 @@ const TerminalInput = ({
     onChange(e.target.value);
     const val = e.target.value.toLowerCase();
 
-    const detectedEasterEgg = EASTER_EGG_COMMANDS.find((command) =>
-      val.includes(command),
+    const detectedEasterEgg = EASTER_EGG_COMMANDS.find(
+      // Check if the input value includes the easter egg command followed by a space
+      // Or: the input value is exactly the easter egg command
+      // Otherwise the command won't work (e.g. "anime" or "anime bla bla" works, but "animebla bla" doesn't work)")
+      (command) => val.includes(command + " ") || val === command,
     );
 
     // Check if input value includes any of the easter egg commands and change text color
