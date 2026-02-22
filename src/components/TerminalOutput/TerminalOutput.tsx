@@ -21,6 +21,7 @@ const TerminalOutput = ({ outputHistory }: TerminalOutputProps) => {
     });
 
     resizeObserver.observe(outputLinesWrapperRef.current);
+    // resizeObserver.observe(document.body);
 
     return () => {
       resizeObserver.disconnect();
