@@ -1,0 +1,68 @@
+.about-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 100%;
+  width: 42rem;
+  margin: 0 auto;
+  border: 3px solid var(--terminal-secondary);
+  padding: 2rem;
+  line-height: 1.5;
+
+  h2 {
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--terminal-secondary);
+    letter-spacing: 0.75px;
+    font-size: 1.07rem;
+  }
+
+  h3 {
+    margin-bottom: 0.75rem;
+    color: var(--terminal-tertiary);
+    display: inline-block;
+    border-bottom: 1.5px solid var(--terminal-tertiary);
+  }
+}
+
+.languages,
+.experience,
+.education {
+  span {
+    color: var(--terminal-primary);
+  }
+}
+
+.languages {
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 0.75rem;
+
+    li {
+      display: inline;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
+
+.experience {
+  span.company {
+    color: var(--terminal-secondary);
+  }
+  ul {
+    margin-top: 0.5rem;
+  }
+  .more-experience {
+    margin-top: 1rem;
+  }
+}
+
+.education {
+  ul li::before {
+    display: none;
+  }
+}

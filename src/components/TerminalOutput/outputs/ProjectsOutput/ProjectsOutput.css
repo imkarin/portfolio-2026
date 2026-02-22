@@ -1,0 +1,45 @@
+.projects {
+  table {
+    border-collapse: collapse;
+    width: 1400px;
+    max-width: 100%;
+    text-align: left;
+
+    thead tr {
+      margin-bottom: 2px;
+    }
+
+    tbody,
+    thead {
+      max-width: 100%;
+      tr {
+        display: grid;
+        grid-template-columns: minmax(150px, 1fr) minmax(200px, 3.5fr) minmax(
+            150px,
+            1fr
+          );
+
+        /* Screens < 576px */
+        @media (max-width: 576px) {
+          grid-template-columns: 1fr;
+          margin-bottom: 1rem;
+        }
+
+        td.name {
+          color: var(--terminal-primary);
+          font-weight: 600;
+        }
+
+        td,
+        th {
+          &:not(:first-child) {
+            &::before {
+              content: "| ";
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

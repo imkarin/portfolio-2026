@@ -1,0 +1,10 @@
+.welcome {
+  span {
+    color: var(--terminal-primary);
+  }
+
+  p:first-child {
+    margin-top: 0.25rem;
+    color: var(--terminal-secondary);
+  }
+}

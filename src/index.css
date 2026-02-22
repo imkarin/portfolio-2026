@@ -1,0 +1,128 @@
+:root {
+  --terminal-bg: #1b1b28;
+  --terminal-text: #cdd6f4;
+  --terminal-text-dim: #6c7086;
+  --terminal-primary: #f38ba8;
+  --terminal-secondary: #7ea9ee;
+  --terminal-tertiary: #f9e2af;
+  --terminal-success: #a6e3a1;
+  --terminal-error: #f38ba8;
+  --terminal-font:
+    "SF Mono", "Monaco", "Inconsolata", "Roboto Mono", "Source Code Pro",
+    "Menlo", monospace;
+  --terminal-font-size: 14px;
+}
+
+/* Themes */
+/* midnight, forest, black-and-white, cozy */
+body.theme-midnight {
+  --terminal-bg: #1b1b28;
+  --terminal-text: #cdd6f4;
+  --terminal-text-dim: #6c7086;
+  --terminal-primary: #f38ba8;
+  --terminal-secondary: #7ea9ee;
+  --terminal-tertiary: #f9e2af;
+  --terminal-success: #a6e3a1;
+  --terminal-error: #f38ba8;
+}
+body.theme-forest {
+  --terminal-bg: #1b2b34;
+  --terminal-text: #c0c5ce;
+  --terminal-text-dim: #65737e;
+  --terminal-primary: #7da44d;
+  --terminal-secondary: #ebdbb2;
+  --terminal-tertiary: #aac380;
+  --terminal-success: #a7c080;
+  --terminal-error: #ec5f67;
+}
+body.theme-black-and-white {
+  --terminal-bg: #131313;
+  --terminal-text: #e7e7e7;
+  --terminal-text-dim: #7e7d90;
+  --terminal-primary: #929292;
+  --terminal-secondary: #979797;
+  --terminal-tertiary: #cfcfcf;
+  --terminal-success: #3fb950;
+  --terminal-error: #f85149;
+}
+body.theme-cozy {
+  /* this should have nice warm orange, yellow, pinkish tones */
+  --terminal-bg: #483639;
+  --terminal-text: #f7ede2;
+  --terminal-text-dim: #d4c2ae;
+  --terminal-primary: #f7c676;
+  --terminal-secondary: #e4a4aa;
+  --terminal-tertiary: #f5cac3;
+  --terminal-success: #29c33d;
+  --terminal-error: #fd9a9a;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: var(--terminal-font-size);
+}
+
+body {
+  background-color: var(--terminal-bg);
+  color: var(--terminal-text);
+  font-family: var(--terminal-font);
+  font-size: var(--terminal-font-size);
+  overflow: hidden;
+}
+
+::selection {
+  background: var(--terminal-primary);
+  color: var(--terminal-bg);
+}
+
+input {
+  outline: none;
+  border: none;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+}
+
+ul {
+  list-style-position: inside;
+  list-style-type: none;
+  li {
+    display: flex;
+    &::before {
+      content: "•";
+      display: block;
+      margin-right: 0.5rem;
+      color: var(--terminal-primary);
+    }
+  }
+}
+
+/* Typography */
+body {
+  line-height: 1.4;
+}
+h2 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+h3,
+h4,
+h5 {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+a {
+  color: var(--terminal-primary);
+}

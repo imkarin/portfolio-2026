@@ -1,0 +1,43 @@
+table.help-table {
+  border-collapse: collapse;
+  width: 800px;
+  max-width: 100%;
+  text-align: left;
+
+  thead tr {
+    margin-bottom: 2px;
+  }
+
+  tbody,
+  thead {
+    max-width: 100%;
+    tr {
+      display: grid;
+      grid-template-columns: minmax(125px, 0.5fr) minmax(200px, 1.8fr) minmax(
+          150px,
+          1fr
+        );
+
+      /* Screens < 576px */
+      @media (max-width: 576px) {
+        grid-template-columns: 1fr;
+        margin-bottom: 0.5rem;
+      }
+
+      td.help-command {
+        color: var(--terminal-primary);
+        font-weight: 600;
+      }
+
+      td,
+      th {
+        &:not(:first-child) {
+          &::before {
+            content: "| ";
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}

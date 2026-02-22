@@ -1,0 +1,19 @@
+.prompt {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.prompt-symbol {
+  color: var(--terminal-secondary);
+  font-weight: 600;
+}
+
+.prompt-path {
+  color: var(--terminal-primary);
+}
+
+.prompt-divider {
+  color: var(--terminal-text-dim);
+}
