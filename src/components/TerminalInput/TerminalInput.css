@@ -12,6 +12,7 @@
     /* Add hint for typing on mobile */
     &::placeholder {
       opacity: 0;
+      color: var(--terminal-text-dim);
       @media screen and (max-width: 768px) {
         opacity: 1;
       }
