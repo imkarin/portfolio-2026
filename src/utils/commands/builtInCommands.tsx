@@ -191,6 +191,7 @@ const executeBuiltInCommand = async (
         ),
       };
 
+    case "fun":
     case "hobbies":
     case "hobby":
       return {
