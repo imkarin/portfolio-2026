@@ -43,14 +43,14 @@ const ProjectsOutput = () => {
     <div className="projects">
       <p>here's some projects I've worked on</p>
       <p>----</p>
-      <table className="projects-table">
-        <thead>
+      <div className="projects-table">
+        <div>
           <tr>
             <th>Name</th>
             <th>Description</th>
             <th>Link</th>
           </tr>
-        </thead>
+        </div>
         <tbody>
           {projects.map((language) => (
             <tr key={language.name}>
@@ -72,7 +72,7 @@ const ProjectsOutput = () => {
             </tr>
           ))}
         </tbody>
-      </table>
+      </div>
     </div>
   );
 };

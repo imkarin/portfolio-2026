@@ -13,6 +13,8 @@ table.help-table {
     max-width: 100%;
     tr {
       display: grid;
+      grid-auto-flow: dense;
+      grid-auto-rows: minmax(0, auto);
       grid-template-columns: minmax(125px, 0.5fr) minmax(200px, 1.8fr) minmax(
           150px,
           1fr
