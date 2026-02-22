@@ -30,7 +30,7 @@ const HelpOutput = () => {
           <td className="help-description">
             ... and perhaps a few too many easter eggs
           </td>
-          <td className="help-example">hint: tv</td>
+          <td className="help-example">hint: hobbies</td>
         </tr>
       </tbody>
     </table>

@@ -40,7 +40,8 @@ const executeBuiltInCommand = async (
         content: (
           <>
             🐣 Nice try! There are a bunch of easter egg commands hidden around
-            here... hint: try '<span className="highlight">tv</span>'
+            here... hint: try <span className="highlight">'hi'</span> or '
+            <span className="highlight">hobbies</span>'
           </>
         ),
       };
@@ -164,6 +165,29 @@ const executeBuiltInCommand = async (
               </li>
             </ul>
           </>
+        ),
+      };
+
+    case "piano":
+      window.open(
+        "https://imkarin.github.io/pianogame/",
+        "_blank",
+        "noopener,noreferrer",
+      );
+      return {
+        type: "success",
+        content: (
+          <div>
+            Opened{" "}
+            <a
+              href="https://imkarin.github.io/pianogame/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              piano game
+            </a>
+            ! Did you learn something new? :)
+          </div>
         ),
       };
 
