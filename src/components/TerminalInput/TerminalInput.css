@@ -8,21 +8,12 @@
 
   .terminal-input {
     flex: 1;
-    min-width: 0;
-    caret-color: var(--terminal-primary);
-  }
 
-  /* Add hint for typing on mobile */
-  @media screen and (max-width: 768px) {
-    .prompt {
-      width: 100%;
-      &::after {
-        content: "type a command here...";
-        color: var(--terminal-text-dim);
-        max-width: 100%;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
+    /* Add hint for typing on mobile */
+    &::placeholder {
+      opacity: 0;
+      @media screen and (max-width: 768px) {
+        opacity: 1;
       }
     }
   }

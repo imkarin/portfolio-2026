@@ -29,6 +29,7 @@ const TerminalInput = ({
         autoFocus
         spellCheck={false}
         autoComplete="off"
+        placeholder="type a command here..."
       />
     </form>
   );
