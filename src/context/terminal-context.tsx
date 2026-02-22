@@ -45,7 +45,6 @@ export const TerminalProvider = ({ children }: { children: ReactNode }) => {
     setTheme((prev) => {
       const currentIndex = themeOptions.indexOf(prev);
       const nextIndex = (currentIndex + 1) % themeOptions.length;
-      console.log(" nextIndex", nextIndex);
       return themeOptions[nextIndex];
     });
   }, [themeOptions, setTheme]);

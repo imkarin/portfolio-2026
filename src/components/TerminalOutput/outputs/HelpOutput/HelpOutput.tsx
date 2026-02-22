@@ -1,11 +1,16 @@
 import { COMMAND_EXPLANATIONS } from "../../../../constants/command-explanations";
 import "./HelpOutput.css";
 
-const HelpOutput = () => {
+const HelpOutput = ({ expanded }: { expanded?: boolean }) => {
   const cmds = Object.entries(COMMAND_EXPLANATIONS).map(([cmd, info]) => ({
     name: cmd,
     ...info,
   }));
+
+  const cmdsFiltered = expanded
+    ? cmds
+    : cmds.filter(({ important }) => important);
+
   return (
     <table className="help-table">
       <thead>
@@ -18,7 +23,7 @@ const HelpOutput = () => {
 
       <tbody>
         {/* Map over cmds for rows */}
-        {cmds.map(({ name, desc, example }) => (
+        {cmdsFiltered.map(({ name, desc, example }) => (
           <tr key={name}>
             <td className="help-command">{name}</td>
             <td className="help-description">{desc}</td>
@@ -26,7 +31,7 @@ const HelpOutput = () => {
           </tr>
         ))}
         <tr>
-          <td className="help-command">[egg]</td>
+          <td className="help-command hint">[egg]</td>
           <td className="help-description">
             ... and perhaps a few too many easter eggs
           </td>

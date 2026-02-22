@@ -1,8 +1,9 @@
-import { ChangeEvent, KeyboardEvent, FormEvent } from "react";
+import { ChangeEvent, KeyboardEvent, FormEvent, useRef } from "react";
 import Prompt from "../Prompt/Prompt";
 import "./TerminalInput.css";
 import { useTerminalContext } from "../../context/terminal-context";
 import { initialOutputHistory } from "../../constants/output-histories";
+import { EASTER_EGG_COMMANDS } from "../../constants/command-explanations";
 
 interface TerminalInputProps {
   value: string;
@@ -22,6 +23,32 @@ const TerminalInput = ({
     (entry) => !initialOutputHistory.includes(entry),
   );
 
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  const onInputChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const val = e.target.value;
+    onChange(val);
+
+    const detectedEasterEgg = EASTER_EGG_COMMANDS.find((command) =>
+      val.includes(command),
+    );
+
+    // Check if input value includes any of the easter egg commands and change text color
+    if (detectedEasterEgg) {
+      const indexInInputVal = val.indexOf(detectedEasterEgg);
+
+      if (indexInInputVal === 0) {
+        if (inputRef.current) {
+          inputRef.current.classList.add("rainbow");
+        }
+      }
+    } else {
+      if (inputRef.current) {
+        inputRef.current.classList.remove("rainbow");
+      }
+    }
+  };
+
   return (
     <form className="terminal-input-line" onSubmit={onSubmit}>
       <Prompt />
@@ -29,9 +56,8 @@ const TerminalInput = ({
         type="text"
         className="terminal-input"
         value={value}
-        onChange={(e: ChangeEvent<HTMLInputElement>) =>
-          onChange(e.target.value)
-        }
+        ref={inputRef}
+        onChange={onInputChange}
         onKeyDown={onKeyDown}
         autoFocus
         spellCheck={false}

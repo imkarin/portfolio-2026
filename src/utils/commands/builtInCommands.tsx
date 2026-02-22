@@ -15,10 +15,6 @@ const executeBuiltInCommand = async (
   let [command, ...args] = trimmed.split(" ");
   const arg = args.join(" ");
 
-  if (trimmed === "tv shows" || trimmed === "tv series") {
-    command = trimmed;
-  }
-
   const latestCommand = commandHistory[commandHistory.length - 1] || "";
 
   switch (command.toLowerCase()) {
@@ -37,6 +33,8 @@ const executeBuiltInCommand = async (
     // Easter eggs
     case "egg":
     case "[egg]":
+    case "easteregg":
+    case "easter":
       return {
         type: "info",
         content: (
@@ -112,8 +110,6 @@ const executeBuiltInCommand = async (
     case "shows":
     case "movies":
     case "series":
-    case "tv series":
-    case "tv shows":
     case "tv":
       return {
         type: "info",
@@ -370,7 +366,12 @@ const executeBuiltInCommand = async (
         ),
       };
     case "help":
-      return { type: "info", content: <HelpOutput /> };
+      return {
+        type: "info",
+        content: (
+          <HelpOutput expanded={args.includes("-all") || args.includes("-a")} />
+        ),
+      };
     case "clear":
       return { type: "clear" };
     case "history": {

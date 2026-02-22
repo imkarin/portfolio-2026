@@ -1,6 +1,6 @@
 table.help-table {
   border-collapse: collapse;
-  width: min(800px, 100%);
+  width: min(1100px, 100%);
   max-width: 100%;
   text-align: left;
 
@@ -27,6 +27,10 @@ table.help-table {
       td.help-command {
         color: var(--terminal-primary);
         font-weight: 600;
+
+        &.hint {
+          color: var(--terminal-tertiary);
+        }
       }
 
       td,
