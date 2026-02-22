@@ -11,6 +11,11 @@
     "SF Mono", "Monaco", "Inconsolata", "Roboto Mono", "Source Code Pro",
     "Menlo", monospace;
   --terminal-font-size: 14px;
+
+  /* Mobile screens: 15px */
+  @media screen and (max-width: 768px) {
+    --terminal-font-size: 15px;
+  }
 }
 
 /* Themes */
