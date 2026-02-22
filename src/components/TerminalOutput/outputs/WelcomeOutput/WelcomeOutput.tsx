@@ -11,7 +11,8 @@ const WelcomeOutput = () => {
       </p>
       <p>----</p>
       <p>
-        or be brave and try <span>"cat"</span> (づ｡◕ ‿ ‿ ◕｡)づ
+        or be brave and try <span>"cat"</span> (づ｡◕{" "}
+        <span className="emoji-mouth">‿‿</span> ◕｡)づ
       </p>
     </div>
   );

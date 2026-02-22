@@ -1,6 +1,10 @@
 .welcome {
-  span {
+  span:not(.emoji-mouth) {
     color: var(--terminal-primary);
+  }
+
+  span.emoji-mouth {
+    display: inline-block;
   }
 
   p:first-child {
