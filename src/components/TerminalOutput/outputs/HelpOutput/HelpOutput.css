@@ -1,6 +1,6 @@
 table.help-table {
   border-collapse: collapse;
-  width: 800px;
+  width: min(800px, 100%);
   max-width: 100%;
   text-align: left;
 

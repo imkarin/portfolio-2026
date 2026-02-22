@@ -1,6 +1,6 @@
 table.languages-table {
   border-collapse: collapse;
-  width: 400px;
+  width: min(400px, 100%);
   max-width: 100%;
 
   tr {
