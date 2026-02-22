@@ -64,7 +64,8 @@ body.theme-cozy {
 }
 
 /* Fix table fontsizes on safari */
-table {
+table,
+* {
   -webkit-text-size-adjust: 100%;
 }
 
