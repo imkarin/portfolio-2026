@@ -27,7 +27,7 @@ const projects = [
       text: "SDV Bundle Tracker",
     },
   },
-  { name: "\n\n" },
+  { name: "\n" },
   {
     name: "And lots more...",
     desc: "I've worked for several companies on many different projects, both internal and client-facing. Please check out my LinkedIn for more details, or feel free to reach out to me :)",
