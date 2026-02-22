@@ -68,6 +68,12 @@ body.theme-cozy {
   margin: 0;
 }
 
+/* Fix table fontsizes on safari */
+table,
+* {
+  -webkit-text-size-adjust: 100%;
+}
+
 html,
 body,
 #root {
