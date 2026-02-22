@@ -31,7 +31,7 @@ const HelpOutput = ({ expanded }: { expanded?: boolean }) => {
           </tr>
         ))}
         <tr>
-          <td className="help-command hint">[egg]</td>
+          <td className="help-command rainbow">[egg]</td>
           <td className="help-description">
             ... and perhaps a few too many easter eggs
           </td>

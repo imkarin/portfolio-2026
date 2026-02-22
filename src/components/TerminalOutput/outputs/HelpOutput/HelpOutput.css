@@ -11,6 +11,7 @@ table.help-table {
   tbody,
   thead {
     max-width: 100%;
+
     tr {
       display: grid;
       grid-template-columns: minmax(125px, 0.5fr) minmax(200px, 1.8fr) minmax(
@@ -28,8 +29,11 @@ table.help-table {
         color: var(--terminal-primary);
         font-weight: 600;
 
-        &.hint {
-          color: var(--terminal-tertiary);
+        &.rainbow {
+          animation-duration: 100s;
+          -webkit-animation-duration: 100s;
+          -moz-animation-duration: 100s;
+          -o-animation-duration: 100s;
         }
       }
 
