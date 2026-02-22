@@ -2,7 +2,7 @@ import { useEffect, useRef, KeyboardEvent, FormEvent } from "react";
 import TerminalOutput from "../TerminalOutput/TerminalOutput";
 import TerminalInput from "../TerminalInput/TerminalInput";
 import { useTerminalContext } from "../../context/terminal-context";
-import { processCommand } from "../../utils/commandProcessor";
+import { processCommand } from "../../utils/commands/commandProcessor";
 import "./Terminal.css";
 
 const Terminal = () => {

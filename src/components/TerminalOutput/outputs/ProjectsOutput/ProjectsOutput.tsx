@@ -23,7 +23,7 @@ const projects = [
     name: "Stardew Valley Tracker",
     desc: "Handy tool for Stardew Valley players to track their progress in completing their game",
     link: {
-      href: "https://stardew-valley-tracker.netlify.app",
+      href: "https://stardew.karins.cafe",
       text: "SDV Bundle Tracker",
     },
   },
@@ -33,7 +33,7 @@ const projects = [
     desc: "I've worked for several companies on many different projects, both internal and client-facing. Please check out my LinkedIn for more details, or feel free to reach out to me :)",
     link: {
       href: "https://www.linkedin.com/in/karin-meijvogel/",
-      text: "linkedIn",
+      text: "linkedin",
     },
   },
 ];

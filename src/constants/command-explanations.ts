@@ -11,7 +11,11 @@ export const COMMAND_EXPLANATIONS: {
   },
   cat: {
     desc: "Get a cute cat image",
-    example: "cat",
+    example: "cat | meow",
+  },
+  dog: {
+    desc: "Get a cute dog image",
+    example: "dog | doge | doggo",
   },
   languages: {
     desc: "Languages I know",

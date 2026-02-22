@@ -9,6 +9,7 @@ type OutputType =
   | "clear"
   | "ascii"
   | "cat-pre-fetch"
+  | "dog-pre-fetch"
   | "history-repeat-cmd";
 
 export interface OutputItem {
