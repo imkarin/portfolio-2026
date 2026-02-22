@@ -33,6 +33,18 @@ const executeBuiltInCommand = async (
       };
 
     // Easter eggs
+    case "egg":
+    case "[egg]":
+      return {
+        type: "info",
+        content: (
+          <>
+            🐣 Nice try! There are a bunch of easter egg commands hidden around
+            here... hint: try '<span className="highlight">tv</span>'
+          </>
+        ),
+      };
+
     case "hi":
       const catOrDog = Math.random() < 0.5 ? "cat" : "dog";
       return {
@@ -53,6 +65,7 @@ const executeBuiltInCommand = async (
         content: <img src="https://c.tenor.com/Tsob5aHiS3UAAAAC/tenor.gif" />,
       };
     case "hey":
+    case "yo":
       return {
         type: "info",
         content: (
@@ -116,8 +129,136 @@ const executeBuiltInCommand = async (
               <li>ATLA</li>
               <li>ghibli movies</li>
               <li>the accountant</li>
+              <li>star wars movies</li>
+              <li>the mandalorian</li>
               <li>spiderman: into the spider-verse movies</li>
               <li>a bunch of anime</li>
+            </ul>
+          </>
+        ),
+      };
+
+    case "music":
+    case "artists":
+      return {
+        type: "info",
+        content: (
+          <>
+            <p>
+              i love listening & playing music! my favourite instrument is the{" "}
+              <span className="highlight">piano</span>, and here are some of my
+              favourite artists
+            </p>
+            <p>----</p>
+            <ul>
+              <li>linkin park</li>
+              <li>three days grace</li>
+              <li>paramore (especially their older albums)</li>
+              <li>keshi</li>
+              <li>rosé</li>
+              <li>lauv</li>
+              <li>voilà</li>
+              <li>
+                a bunch of others... think genres like rock, alternative,
+                (indie) pop, lofi hip-hop & classical
+              </li>
+            </ul>
+          </>
+        ),
+      };
+
+    case "hobbies":
+    case "hobby":
+      return {
+        type: "info",
+        content: (
+          <>
+            <p>
+              in my free time, i dabble in a bunch of different hobbies. perhaps
+              there are some <span className="highlight">easter eggs</span>{" "}
+              hidden here? ;)
+            </p>
+            <p>----</p>
+            <ul>
+              <li>
+                listening to & making <span className="highlight">music</span>
+              </li>
+              <li>drawing and painting</li>
+              <li>
+                tv <span className="highlight">shows</span> and movies
+              </li>
+              <li>
+                manga and <span className="highlight">anime</span>
+              </li>
+              <li>gaming (mostly indie games and a few shooters)</li>
+              <li>
+                board games (yahtzee, chess - even though i'm pretty bad lol)
+              </li>
+              <li>walks and hikes in nature</li>
+              <li>
+                discovering cozy <span className="highlight">cafes</span>
+              </li>
+            </ul>
+          </>
+        ),
+      };
+
+    case "cafe":
+    case "cafes":
+    case "café":
+    case "drink":
+    case "drinks":
+    case "menu":
+      return {
+        type: "info",
+        content: (
+          <>
+            <p>
+              i looove discovering cozy cafes and i'm a sucker for a good cup of
+              tea. if you're looking for inspiration, here are some of my go-to
+              drinks
+            </p>
+            <p>----</p>
+            <ul>
+              <li>
+                matcha latte (<span className="highlight">+</span> strawberry
+                syrup)
+              </li>
+              <li>jasmine milk tea</li>
+              <li>oolong milk tea</li>
+              <li>mango or strawberry milk/milk tea</li>
+              <li>homemade lemonade with lemon, mint or ginger</li>
+              <li>homemade iced teas</li>
+              <li>chai latte</li>
+              <li>hot chocolate</li>
+            </ul>
+          </>
+        ),
+      };
+
+    case "gaming":
+    case "games":
+    case "game":
+    case "videogame":
+    case "videogames":
+      return {
+        type: "info",
+        content: (
+          <>
+            <p>some of my all time favourite games</p>
+            <p>----</p>
+            <ul>
+              <li>hollow knight (!!!)</li>
+              <li>hollow knight silksong (!!!)</li>
+              <li>stardew valley</li>
+              <li>nier: automata</li>
+              <li>portal 2</li>
+              <li>hades</li>
+              <li>dredge</li>
+              <li>celeste</li>
+              <li>peak</li>
+              <li>valorant (love-hate relationship tbh)</li>
+              <li>pubg</li>
             </ul>
           </>
         ),
