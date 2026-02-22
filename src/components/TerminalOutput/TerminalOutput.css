@@ -54,3 +54,7 @@
     color: var(--terminal-success);
   }
 }
+
+.highlight {
+  color: var(--terminal-tertiary);
+}

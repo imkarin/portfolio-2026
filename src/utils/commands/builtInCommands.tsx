@@ -12,10 +12,118 @@ const executeBuiltInCommand = async (
   clearCommandHistory: () => void,
   toggleTheme: () => void,
 ): Promise<CommandResult> => {
-  const [command, ...args] = trimmed.split(" ");
+  let [command, ...args] = trimmed.split(" ");
   const arg = args.join(" ");
 
+  if (trimmed === "tv shows" || trimmed === "tv series") {
+    command = trimmed;
+  }
+  console.log("command", command);
   switch (command.toLowerCase()) {
+    // Personalized commands
+    case "rifurbish":
+      return {
+        type: "info",
+        content: (
+          <>
+            hi <span className="highlight">Rifurbish</span>! thanks for taking a
+            look at my silly lil' site :)
+          </>
+        ),
+      };
+
+    // Easter eggs
+    case "hi":
+      const catOrDog = Math.random() < 0.5 ? "cat" : "dog";
+      return {
+        type: "info",
+        content: (
+          <img
+            src={
+              catOrDog === "cat"
+                ? "https://c.tenor.com/V63KyNY_beIAAAAC/tenor.gif"
+                : "https://c.tenor.com/hfOsQwdPcyMAAAAd/tenor.gif"
+            }
+          />
+        ),
+      };
+    case "hello":
+      return {
+        type: "info",
+        content: <img src="https://c.tenor.com/Tsob5aHiS3UAAAAC/tenor.gif" />,
+      };
+    case "hey":
+      return {
+        type: "info",
+        content: (
+          <>
+            <img src="https://c.tenor.com/CQ1MQ0t6fn8AAAAC/tenor.gif" />
+            <p>sealutations</p>
+          </>
+        ),
+      };
+    case "bonjour":
+      return {
+        type: "info",
+        content: <img src="/bonjour_bear.jpg" />,
+      };
+    case "anime":
+      return {
+        type: "info",
+        content: (
+          <>
+            <p>i'm so glad you asked!! here are some of my favourite anime</p>
+            <p>----</p>
+            <ul>
+              <li>spy x family</li>
+              <li>apothecary diaries</li>
+              <li>death note</li>
+              <li>your lie in april</li>
+              <li>frieren</li>
+              <li>tokyo ghoul</li>
+              <li>solo leveling</li>
+              <li>chainsaw man</li>
+              <li>dandadan</li>
+              <li>jujutsu kaisen</li>
+              <li>demon slayer</li>
+              <li>durarara!!</li>
+              <li>dog & scissors</li>
+              <li>and manyyyy more...</li>
+            </ul>
+          </>
+        ),
+      };
+    case "shows":
+    case "movies":
+    case "series":
+    case "tv series":
+    case "tv shows":
+    case "tv":
+      return {
+        type: "info",
+        content: (
+          <>
+            <p>
+              you found my shows & movies collection! here are some of my
+              favourites
+            </p>
+            <p>----</p>
+            <ul>
+              <li>arcane</li>
+              <li>the pitt</li>
+              <li>the good doctor</li>
+              <li>dark (netflix series)</li>
+              <li>ATLA</li>
+              <li>ghibli movies</li>
+              <li>the accountant</li>
+              <li>spiderman: into the spider-verse movies</li>
+              <li>a bunch of anime</li>
+            </ul>
+          </>
+        ),
+      };
+
+    // Main commands
     case "theme":
       toggleTheme();
       return { type: "success", content: "Changed theme" };

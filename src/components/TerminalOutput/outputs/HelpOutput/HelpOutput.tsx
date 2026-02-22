@@ -25,6 +25,13 @@ const HelpOutput = () => {
             <td className="help-example">{example}</td>
           </tr>
         ))}
+        <tr>
+          <td className="help-command">[egg]</td>
+          <td className="help-description">
+            ... and perhaps a few too many easter eggs
+          </td>
+          <td className="help-example">hint: tv</td>
+        </tr>
       </tbody>
     </table>
   );

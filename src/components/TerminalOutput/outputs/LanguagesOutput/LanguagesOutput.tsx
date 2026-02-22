@@ -19,8 +19,12 @@ const languages = [
 
 const LanguagesOutput = () => {
   return (
-    <>
-      <p>here's some languages I know</p>
+    <div className="languages">
+      <p>
+        i'm a huge language nerd. i'm always trying to learn new ones - but a
+        bunch of them i only speak a little, and didn't make it to this list.
+        here are the ones i do feel comfortable with:
+      </p>
       <p>----</p>
       <table className="languages-table">
         <tbody>
@@ -32,7 +36,7 @@ const LanguagesOutput = () => {
           ))}
         </tbody>
       </table>
-    </>
+    </div>
   );
 };
 
