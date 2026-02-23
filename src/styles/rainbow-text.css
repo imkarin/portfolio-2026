@@ -25,7 +25,7 @@
       #0ff 0%,
       #97fba0 20%,
       #fbef97 40%,
-      #ff8bb4 60%,
+      #ffa08b 60%,
       #97b1fb 80%,
       #0ff 100%
     )
@@ -38,12 +38,12 @@
   -ms-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
   /*Animation  한번에 여러개 적용하기 */
-  animation: masked 10s linear infinite;
+  animation: masked 8s linear infinite;
   /* fadeInDown 1.5s both 1; */
-  -webkit-animation: masked 10s linear infinite;
+  -webkit-animation: masked 8s linear infinite;
   /* fadeInDown 1.5s both 1; */
-  -moz-animation: masked 10s linear infinite;
+  -moz-animation: masked 8s linear infinite;
   /* fadeInDown 1.5s both 1; */
-  -o-animation: masked 10s linear infinite;
+  -o-animation: masked 8s linear infinite;
   /* fadeInDown 1.5s both 1; */
 }
