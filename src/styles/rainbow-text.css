@@ -18,12 +18,6 @@
     transform: translatey(0px);
   }
 } */
-body {
-  background-color: black;
-}
-.Target {
-  z-index: 1;
-}
 
 .rainbow {
   background: -webkit-linear-gradient(
