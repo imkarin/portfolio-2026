@@ -9,7 +9,8 @@ const AboutOutput = () => {
         creativity & tech! I have over 8 years of experience as a developer of
         all kinds, but my specialty is web development. In my free time, I love
         gaming, making music, reading and venturing out in nature. Thanks for
-        checking out my portfolio! (づ｡◕ ‿ ‿ ◕｡)づ
+        checking out my portfolio! (づ｡◕ <span className="emoji-mouth">‿‿</span>{" "}
+        ◕｡)づ
       </p>
 
       <section className="languages">

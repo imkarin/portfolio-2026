@@ -74,6 +74,10 @@ table,
   -webkit-text-size-adjust: 100%;
 }
 
+span.emoji-mouth {
+  display: inline-block;
+}
+
 html,
 body,
 #root {

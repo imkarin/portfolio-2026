@@ -3,10 +3,6 @@
     color: var(--terminal-primary);
   }
 
-  span.emoji-mouth {
-    display: inline-block;
-  }
-
   p:first-child {
     margin-top: 0.25rem;
     color: var(--terminal-secondary);
