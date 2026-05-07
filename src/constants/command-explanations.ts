@@ -1,4 +1,6 @@
 export const EASTER_EGG_COMMANDS = [
+  "Maze",
+  "maze",
   "[egg]",
   "egg",
   "easteregg",
@@ -30,7 +32,6 @@ export const EASTER_EGG_COMMANDS = [
   "videogame",
   "games",
   "game",
-  "rifurbish",
 ];
 
 export const COMMAND_EXPLANATIONS: {
