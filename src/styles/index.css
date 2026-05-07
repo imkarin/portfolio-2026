@@ -63,7 +63,7 @@ body.theme-cozy {
 }
 body.theme-light {
   /* this should have nice light, airy tones */
-  --terminal-bg: #f5f5f5;
+  --terminal-bg: #f5f4f0;
   --terminal-text: #333333;
   --terminal-text-dim: #666666;
   --terminal-primary: #653097;
