@@ -372,6 +372,7 @@ const executeBuiltInCommand = async (
           </div>
         ),
       };
+    case "commands":
     case "help":
       return {
         type: "info",
