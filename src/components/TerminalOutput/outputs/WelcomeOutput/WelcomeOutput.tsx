@@ -3,7 +3,7 @@ import "./WelcomeOutput.css";
 const WelcomeOutput = () => {
   return (
     <div className="welcome">
-      <p>✨ hey there</p>
+      <p>✨ hey there!</p>
 
       <p>----</p>
       <p>
