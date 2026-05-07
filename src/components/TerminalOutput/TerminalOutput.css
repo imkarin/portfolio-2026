@@ -30,7 +30,7 @@
 
 .terminal-line.welcome-ascii {
   font-size: clamp(2px, 8px, 0.8vw);
-  line-height: 1.3;
+  line-height: 1;
 }
 
 .terminal-line.input-line {
