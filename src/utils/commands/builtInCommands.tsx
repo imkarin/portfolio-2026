@@ -26,10 +26,10 @@ const executeBuiltInCommand = async (
         content: (
           <>
             hi <span className="rainbow">Maze</span>! thanks for taking a look
-            at my portfolio :) this portfolio was more of a fun project, so if
-            you'd like to chat or have any questions, feel free to reach out to
-            me. i'm super excited to connect and for the opportunity to work
-            together!
+            at my portfolio :) this portfolio started out as more of a fun
+            project, so if you'd like to chat or have any questions, feel free
+            to reach out to me. i'm super excited to connect and for the
+            opportunity to work with you!
             <br /> <br />
             have a great day! ☀️
           </>
