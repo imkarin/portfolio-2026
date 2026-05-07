@@ -302,6 +302,7 @@ const executeBuiltInCommand = async (
         content: <LanguagesOutput />,
       };
     case "projects":
+    case "work":
       return {
         type: "info",
         content: <ProjectsOutput />,

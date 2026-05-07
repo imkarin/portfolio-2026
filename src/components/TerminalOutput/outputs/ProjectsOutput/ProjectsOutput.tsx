@@ -41,7 +41,18 @@ const projects = [
 const ProjectsOutput = () => {
   return (
     <div className="projects">
-      <p>here's some projects I've worked on</p>
+      <p>
+        here's some projects I've worked on. most of my work experience can be
+        found on my{" "}
+        <a
+          href="https://linkedin.com/in/karin-meijvogel"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          linkedin
+        </a>{" "}
+        though. if you'd like to know more, don't hesitate to reach out
+      </p>
       <p>----</p>
       <table className="projects-table">
         <thead>
