@@ -4,7 +4,7 @@ import { usePersistentState } from "../hooks/usePersistentState";
 import { OutputItem } from "../types/types";
 import { initialOutputHistory } from "../constants/output-histories";
 
-const themeOptions = ["midnight", "forest", "cozy", "black-and-white"];
+const themeOptions = ["midnight", "forest", "cozy", "black-and-white", "light"];
 
 interface TerminalContextValue {
   outputHistory: OutputItem[];

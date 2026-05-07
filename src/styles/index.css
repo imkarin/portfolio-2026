@@ -61,6 +61,17 @@ body.theme-cozy {
   --terminal-success: #29c33d;
   --terminal-error: #fd9a9a;
 }
+body.theme-light {
+  /* this should have nice light, airy tones */
+  --terminal-bg: #f5f5f5;
+  --terminal-text: #333333;
+  --terminal-text-dim: #666666;
+  --terminal-primary: #653097;
+  --terminal-secondary: #80b62b;
+  --terminal-tertiary: #451e5e;
+  --terminal-success: #28a745;
+  --terminal-error: #dc3545;
+}
 
 * {
   box-sizing: border-box;
