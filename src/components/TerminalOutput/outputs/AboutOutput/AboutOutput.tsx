@@ -8,9 +8,9 @@ const AboutOutput = () => {
         Hi! I'm Karin, a software developer with a passion for combining
         creativity & tech! I have over 8 years of experience as a developer of
         all kinds, but my specialty is web development. In my free time, I love
-        gaming, making music, reading and venturing out in nature. Thanks for
-        checking out my portfolio! (づ｡◕ <span className="emoji-mouth">‿‿</span>{" "}
-        ◕｡)づ
+        making music, learning, gaming, reading and venturing out in nature.
+        Thanks for checking out my portfolio! (づ｡◕{" "}
+        <span className="emoji-mouth">‿‿</span> ◕｡)づ
       </p>
 
       <section className="languages">
@@ -82,7 +82,8 @@ const AboutOutput = () => {
             <span>Institute:</span> Hogeschool van Amsterdam
           </li>
           <li>
-            <span>Education:</span> Communicaton & Multimedia Design
+            <span>Education:</span> Communicaton & Multimedia Design (UX
+            Research & Design)
           </li>
           <li>
             <span>Degree:</span> Bachelor of Science
