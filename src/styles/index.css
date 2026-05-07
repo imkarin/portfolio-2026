@@ -66,9 +66,9 @@ body.theme-light {
   --terminal-bg: #f5f4f0;
   --terminal-text: #333333;
   --terminal-text-dim: #666666;
-  --terminal-primary: #653097;
+  --terminal-primary: #9c5ed6;
   --terminal-secondary: #80b62b;
-  --terminal-tertiary: #451e5e;
+  --terminal-tertiary: #7f3fa7;
   --terminal-success: #28a745;
   --terminal-error: #dc3545;
 }
